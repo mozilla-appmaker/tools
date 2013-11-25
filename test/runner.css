@@ -1,0 +1,15 @@
+pre  {
+	border: 1px solid grey;
+ 	white-space: pre-wrap;       /* css-3 */
+ 	margin-left: 6em;
+	padding: 1em;
+	font-size: x-small;
+	max-width: 840px;
+	display: block;
+}
+
+#codes {
+	white-space: pre-wrap;
+	max-width: 840px;
+	font-size: 80%;
+}
