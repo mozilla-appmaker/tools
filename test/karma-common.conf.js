@@ -2,7 +2,7 @@ exports.mixin_common_opts = function(karma, opts) {
 	var browsers;
 	var os = require('os').type();
 	if (os === 'Darwin') {
-    browsers = ['Chrome']; // , 'ChromeCanaryExperimental', 'Firefox', 'Safari'];
+    browsers = ['FirefoxNightly']; // , 'ChromeCanaryExperimental', 'Chrome', 'Safari'];
 	} else if (os === 'Windows_NT') {
     browsers = ['Chrome', 'Firefox', 'IE'];
 	} else {
@@ -72,7 +72,7 @@ exports.mixin_common_opts = function(karma, opts) {
 
     // Auto run tests on start (when browsers are captured) and exit
     // CLI --single-run --no-single-run
-    singleRun: true,
+    singleRun: false,
 
     // report which specs are slower than 500ms
     // CLI --report-slower-than 500
@@ -82,10 +82,10 @@ exports.mixin_common_opts = function(karma, opts) {
       'karma-html2js-preprocessor',
    //    'karma-browserstack-launcher',
       'karma-chrome-launcher',
-      // 'karma-firefox-launcher',
-			// 'karma-ie-launcher',
-   //    'karma-ios-launcher',
-   //    'karma-safari-launcher',
+      'karma-firefox-launcher',
+			'karma-ie-launcher',
+      'karma-ios-launcher',
+      'karma-safari-launcher',
       'karma-script-launcher',
       // 'karma-crbot-reporter'
     ]
